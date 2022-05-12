@@ -29,11 +29,23 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  bloc: ^8.0.0
+  flutter_bloc: ^8.0.0
+  equatable: ^2.0.3
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  sqflite: ^2.0.2+1
+  dio: ^4.0.6
+  bloc_concurrency: ^0.2.0
+  expressions:
+    git: 
+      url: https://github.com/Humble-Xiang/expressions.git
+  html: ^0.15.0
+  chewie: ^1.3.3
+  wakelock: ^0.6.1+2
+  quiver: ^3.1.0
 
 dev_dependencies:
   flutter_test:
