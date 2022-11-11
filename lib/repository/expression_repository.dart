@@ -70,16 +70,4 @@ class ExpressionRepository {
     final context = {'streamUrl': url, ...ExpressionContext.originalContext};
     return await eval(source.findStreamExpressionList!, context) as String;
   }
-
-//   Future<String> evalFindStreamExpression() async {
-//     const url = 'https://www.ttsp.tv/vodplay/504873-4-1.html';
-//     const expression = '''
-// document = getDocument(streamUrl);
-// str = stringMatch('(?<=},"url":")[^&"]*', document.body.outerHtml);
-// str.replaceAll(_backslash, "")
-// ''';
-//     final context = {'streamUrl': url, ...ExpressionContext.originalContext};
-//     final result = await eval(parse(expression), context) as String;
-//     return result as String;
-//   }
 }

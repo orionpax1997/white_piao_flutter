@@ -9,6 +9,7 @@ import 'package:white_piao/modals/episode_group.dart';
 
 final evaluator = AsyncExpressionEvaluator(memberAccessors: [
   _stringMemberAccessor,
+  _listMemberAccessor,
   _documentMemberAccessor,
   _elementMemberAccessor,
   _discoveryBuilderMemberAccessor,
@@ -29,9 +30,13 @@ Future<dynamic> eval(
 }
 
 List<Expression> parse(String expression) {
-  final expressions = expression
-      .replaceAll(RegExp('\\s'), '')
-      .split(RegExp(";(?=([^\"']*[\"'][^\"']*[\"'])*[^\"']*\$)"));
+  return _parse(
+      expression.replaceAll(RegExp('\\s'), '').replaceAll('_space_', ' '));
+}
+
+List<Expression> _parse(String expression) {
+  final expressions =
+      expression.split(RegExp(";(?=([^\"']*[\"'][^\"']*[\"'])*[^\"']*\$)"));
   expressions.removeWhere((element) => element.isEmpty);
   return expressions.map((element) => Expression.parse(element)).toList();
 }
@@ -53,7 +58,7 @@ class ExpressionContext {
 
   static Future<List<dynamic>> map(
       List<dynamic> list, String expression) async {
-    final expressions = parse(expression);
+    final expressions = _parse(expression);
     final result = [];
 
     for (var i = 0; i < list.length; i++) {
@@ -138,6 +143,10 @@ class ExpressionContext {
 
 final _stringMemberAccessor = MemberAccessor<String>({
   'replaceAll': (v) => v.replaceAll,
+});
+
+final _listMemberAccessor = MemberAccessor<List>({
+  'sublist': (v) => v.sublist,
 });
 
 final _documentMemberAccessor = MemberAccessor<Document>({

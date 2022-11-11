@@ -149,6 +149,7 @@ class SeriesPage extends StatelessWidget {
               child: TabBarView(
                 children: state.episodeGroups
                     .map((g) => Wrap(
+                        spacing: 10,
                         children: g.episodes!
                             .map((e) => OutlinedButton(
                                 focusNode: FocusNode(onKey: (node, event) {

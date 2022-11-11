@@ -13,8 +13,8 @@ class DiscoveryItem extends StatelessWidget {
       child: Card(
         clipBehavior: Clip.antiAlias,
         child: Row(children: [
-          SizedBox(
-            width: 150,
+          Expanded(
+            flex: 3,
             child: Image.network(
               discovery.image!,
               fit: BoxFit.fitWidth,
@@ -32,6 +32,12 @@ class DiscoveryItem extends StatelessWidget {
                   const Spacer(flex: 10),
                   Text(discovery.title!, style: const TextStyle(fontSize: 20)),
                   const Spacer(flex: 2),
+                  Text(discovery.source!.name,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
+                      style: const TextStyle(
+                          fontSize: 15, color: Colors.blueGrey)),
+                  const Spacer(flex: 1),
                   Text(discovery.actors!,
                       overflow: TextOverflow.ellipsis,
                       maxLines: 1,

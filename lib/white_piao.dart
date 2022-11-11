@@ -11,7 +11,7 @@ import 'package:white_piao/pages/sources_page.dart';
 class WhitePiaoApp extends StatelessWidget {
   const WhitePiaoApp({Key? key}) : super(key: key);
 
-  static const String _title = 'WhitePiao';
+  static const String _title = '白嫖';
 
   @override
   Widget build(BuildContext context) {

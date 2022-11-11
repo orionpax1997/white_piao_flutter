@@ -28,13 +28,12 @@ class DiscoveriesPage extends StatelessWidget {
                     physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (context, index) {
                       final discovery = state.discoveries[index];
-                      return ListTile(
-                        focusNode: FocusNode(skipTraversal: true),
+                      return InkWell(
                         onTap: () {
                           Navigator.of(context).pushNamed('series_page',
                               arguments: Favorite.fromDiscovery(discovery));
                         },
-                        title: FocusNodeWrap(
+                        child: FocusNodeWrap(
                           child: DiscoveryItem(discovery: discovery),
                           onClick: () {
                             Navigator.of(context).pushNamed('series_page',
