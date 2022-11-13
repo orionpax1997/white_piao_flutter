@@ -1,10 +1,14 @@
-你可能需要 [白嫖 React Native 版](https://github.com/Humble-Xiang/white-piao)。
+![](https://i.imgur.com/waxVImv.png)
+
+你可能需要访问的是 [白嫖 React Native 版](https://github.com/Humble-Xiang/white-piao)。
+
+[![白嫖](https://website-card-embed-demo.humblex.top/api/screenshot?url=https://github.com/Humble-Xiang/white-piao)](https://github.com/Humble-Xiang/white-piao)
 
 因为 [表达式](https://github.com/Humble-Xiang/expressions) 语法的可读性，编写爬取一个资源网站的表达式的成本过高且不利于社区贡献不再对此项目进行维护。React Native 版本的白嫖的表达式使用 JavaScript 编写，而不是复杂的 Dart 表达式语法。
 
 [白嫖 React Native 版](https://github.com/Humble-Xiang/white-piao) 使用 nodejs 沙箱执行脚本，并提供 [白嫖资源表达式管理端](https://white-piao.humblex.top/) 维护表达式。
 
----
+![](https://i.imgur.com/waxVImv.png)
 
 白嫖是一款提供网络视频搜索的工具，为广大网友提供一种方便、快捷舒适的试看体验。软件不提供内容，需要您自己手动添加，例如导入视频源等。
 
